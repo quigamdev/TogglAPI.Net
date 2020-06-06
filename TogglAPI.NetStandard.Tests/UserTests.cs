@@ -5,6 +5,7 @@ using System.Text;
 using NUnit.Framework;
 using Toggl.Extensions;
 using Toggl.Services;
+using TogglAPI.NetStandard.Tests;
 
 namespace Toggl.Tests
 {
@@ -15,11 +16,10 @@ namespace Toggl.Tests
 		[Test]
 		public void GetViaRestSharp()
 		{
-			var restSharpClient = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var restSharpClient = new TogglApiViaRestSharp(TogglApiTestKey.apikey, "api_token");
 			var user = restSharpClient.GetUserInfo();
 
 			Assert.IsNotNull(user);
-
 
 		}
 

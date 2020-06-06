@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
+using TogglAPI.NetStandard.Tests;
 //using Toggl.Services;
 
 namespace Toggl.Tests
@@ -20,7 +21,7 @@ namespace Toggl.Tests
 		[Test]
 		public void NoClientsByDefaultRestSharp()
 		{
-			var client = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var client = new TogglApiViaRestSharp(TogglApiTestKey.apikey, "api_token");
 
 			var clientsList = client.GetClientsVisibleToUser();
 			Assert.IsFalse(clientsList.Any());
@@ -29,7 +30,7 @@ namespace Toggl.Tests
 		[Test]
 		public void GetClientsRestSharp()
 		{
-			var client = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var client = new TogglApiViaRestSharp(TogglApiTestKey.apikey, "api_token");
 
 			var clientsList = client.GetClientsVisibleToUser();
 			Assert.IsFalse(clientsList.Any());
@@ -52,7 +53,7 @@ namespace Toggl.Tests
 		[Test]
 		public void AddClientRestSHarp()
 		{
-			var client = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var client = new TogglApiViaRestSharp(TogglApiTestKey.apikey, "api_token");
 
 			var workspaceId = client.GetWorkspaces().Single().id;
 
@@ -73,7 +74,7 @@ namespace Toggl.Tests
 		[Test]
 		public void GetClientDetailsRestSharp()
 		{
-			var client = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var client = new TogglApiViaRestSharp("api_token", TogglApiTestKey.apikey);
 
 			var workspaceId = client.GetWorkspaces().Single().id;
 
@@ -97,7 +98,7 @@ namespace Toggl.Tests
 		[Test]
 		public void UpdateClientRestSharp()
 		{
-			var client = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var client = new TogglApiViaRestSharp(TogglApiTestKey.apikey, "api_token");
 
 			var workspaceId = client.GetWorkspaces().Single().id;
 
@@ -123,7 +124,7 @@ namespace Toggl.Tests
 		[Test]
 		public void DeleteClientRestSharp()
 		{
-			var client = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var client = new TogglApiViaRestSharp("api_token", TogglApiTestKey.apikey);
 
 			var workspaceId = client.GetWorkspaces().Single().id;
 

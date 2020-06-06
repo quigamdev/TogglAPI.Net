@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using Toggl.Services;
+using TogglAPI.NetStandard.Tests;
 
 namespace Toggl.Tests
 {
@@ -13,7 +14,7 @@ namespace Toggl.Tests
 		[Test]
 		public void GetWorkSpacesRestSharp()
 		{
-			var client = new TogglApiViaRestSharp("6eae86fe55a39666057f045af4e3ca83", "api_token");
+			var client = new TogglApiViaRestSharp(TogglApiTestKey.apikey, "api_token");
 
 			var workspaces = client.GetWorkspaces();
 			Assert.AreEqual(workspaces.Count(), 1); //by default user also have one workspace

@@ -24,8 +24,6 @@ namespace Toggl.Tests
 
 
 
-
-
         private static SettingElement GetSetting(Configuration config, string name)
         {
             var group = config.GetSectionGroup("applicationSettings");
