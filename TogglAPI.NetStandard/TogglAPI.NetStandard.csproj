@@ -8,8 +8,8 @@
     <Authors />
     <PackageProjectUrl>https://github.com/quigamdev/TogglAPI.Net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/quigamdev/TogglAPI.Net</RepositoryUrl>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <Version>1.0.1.0</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <Version>1.0.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
